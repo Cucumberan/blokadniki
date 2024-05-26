@@ -1,0 +1,22 @@
+# Define samples from READS dir
+
+SAMPLES, = glob_wildcards(f"{config['READS']}/V350161676_L01_BLOK{{sample}}_1.fq.gz")
+
+rule all:
+    input:
+        f"{results}/raw_joint_cohort_annotated.vcf"
+
+
+##### Target rules #####
+
+include: "rules/quality_control.smk"
+include: "rules/map_to_reference.smk"
+include: "rules/sam_to_bam.smk"
+include: "rules/gatk_MarkDuplicates.smk"
+include: "rules/gatk_BaseRecalibrator.smk"
+include: "rules/gatk_ApplyBQSR.smk"
+include: "rules/gatk_HaplotypeCaller.smk"
+include: "rules/create_sample_map.smk"
+include: "rules/gatk_GenomicsDBImport.smk"
+include: "rules/gatk_GenotypeGVCFs.smk"
+include: "rules/gatk_Funcotator.smk"
