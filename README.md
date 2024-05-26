@@ -20,6 +20,8 @@ This workflow is designed to follow the [GATK best practice workflow for germlin
 6. Combine GVCF into multi-sample GVCF ([GATK GenomicsDBImport](https://gatk.broadinstitute.org/hc/en-us/articles/360036883491-GenomicsDBImport))
 7. Genotyping ([GATK GenotypeGVCFs](https://gatk.broadinstitute.org/hc/en-us/articles/4414594430619-GenotypeGVCFs))
 8. Annotation ([GATK Funcotator](https://gatk.broadinstitute.org/hc/en-us/articles/360037224432-Funcotator))
+   
+<img src="./images/rulegraph.png" class="center">
 
 ### Main output files.
 - `results/raw_joint_cohort.vcf`
