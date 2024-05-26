@@ -1,0 +1,24 @@
+##############################
+###### Overall workflow ######
+##############################
+
+# File path to the reference genome (.fasta)
+REFGENOME: "/media/EXOMEDATA/student_projects/blokadniki/test/supporting_files/hg38/hg38.fa"
+
+
+# File path to dbSNP database
+dbSNP: "/media/EXOMEDATA/student_projects/blokadniki/test/supporting_files/hg38/Homo_sapiens_assembly38.dbsnp138.vcf"
+
+# Input data (fastq)
+
+READS: "/media/CERBADATA/sambashare/S250022323/L01/FASTQ"
+
+
+# Databases for annotation
+
+DataSourcePath: "/media/EXOMEDATA/student_projects/blokadniki/test/supporting_files/funcotator_dataSources.v1.7.20200521g"
+
+# Number of threads to use per rule/sample for multithreaded rules, multithreading will significantly speed up these rules (diminishing speed gains beyond 8 threads)
+THREADS: 10
+
+
